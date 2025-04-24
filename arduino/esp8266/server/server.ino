@@ -74,10 +74,23 @@ void loop() {
   }
 
   showHtmlPage(client);
-
+  //showJsonData(client);
+  
   delay(1);
   Serial.println("Client disonnected");
   Serial.println("");
+}
+
+void showJsonData(WiFiClient client){
+  client.println("HTTP/1.1 200 OK");
+  client.println("Content-type: application/json"); // Retornando JSON
+  client.println("Connection: close");
+  client.println();
+  client.print("{\"LED\":");
+  client.print(state);
+  client.print(",\"PIN\":");
+  client.print(LED);
+  client.println("}");
 }
 
 void showHtmlPage(WiFiClient client){
