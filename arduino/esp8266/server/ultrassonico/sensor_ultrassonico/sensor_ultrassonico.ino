@@ -2,8 +2,8 @@
 #include <ESP8266WiFi.h>
 #include <HCSR04.h>
 
-const char* ssid = "brisa-1119445";
-const char* password = "yqvzi68d";
+const char* ssid = "genilson";
+const char* password = "genilson123";
 
 WiFiServer server(80); //Porta 80
 
@@ -82,8 +82,8 @@ void loop() {
     state = LOW;
   }
 
-  showHtmlPage(client);
-  //showJsonData(client);
+  //showHtmlPage(client);
+  showJsonData(client);
 
   
   delay(1);
