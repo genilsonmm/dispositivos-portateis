@@ -1,7 +1,0 @@
-{
-  "name": "app-storage2",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "vue-vite"
-}
